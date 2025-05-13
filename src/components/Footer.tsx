@@ -3,132 +3,176 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
 
+
 export function Footer() {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
-  const legal = ["Terms", "Privacy", "Legal"];
+  const navigation = [
+    { name: "Workshops", href: "/workshops" },
+    { name: "Curriculum", href: "/curriculum" },
+    { name: "ATL Integration", href: "/atl" },
+    { name: "About Us", href: "/about" },
+    { name: "Blog", href: "/blog" }
+  ];
+
+  const legal = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Contact", href: "/contact" }
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative bg-gray-50 dark:bg-gray-900">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-200 dark:border-gray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
-              {" "}
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
+                className="flex items-center space-x-2 text-2xl font-medium text-indigo-600 dark:text-white"
               >
-                <Image
-                  src="/img/logo.svg"
-                  alt="N"
-                  width="32"
-                  height="32"
-                  className="w-8"
-                />
-                <span>Nextly</span>
+               
+                <span>Robogen</span>
               </Link>
             </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
-            </div>
-
-            <div className="mt-5">
-              <a
-                href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
-                target="_blank"
-                rel="noopener"
-                className="relative block w-44"
-              >
-                <Image
-                  src="/img/vercel.svg"
-                  alt="Powered by Vercel"
-                  width="212"
-                  height="44"
-                />
-              </a>
+            <div className="max-w-md mt-4 text-gray-600 dark:text-gray-300">
+              Empowering classrooms with AI and robotics education through hands-on 
+              workshops and ATL-compliant curriculum for students and teachers.
             </div>
           </div>
 
           <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {navigation.map((item, index) => (
+            <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+              Resources
+            </h3>
+            <div className="flex flex-wrap w-full mt-4 -ml-3 lg:ml-0">
+              {navigation.map((item) => (
                 <Link
-                  key={index}
-                  href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  key={item.name}
+                  href={item.href}
+                  className="w-full px-4 py-2 text-gray-600 rounded-md dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
-                  {item}
+                  {item.name}
                 </Link>
               ))}
             </div>
           </div>
+
           <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {legal.map((item, index) => (
+            <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+              Legal
+            </h3>
+            <div className="flex flex-wrap w-full mt-4 -ml-3 lg:ml-0">
+              {legal.map((item) => (
                 <Link
-                  key={index}
-                  href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  key={item.name}
+                  href={item.href}
+                  className="w-full px-4 py-2 text-gray-600 rounded-md dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
-                  {item}
+                  {item.name}
                 </Link>
               ))}
             </div>
           </div>
-          <div className="">
-            <div>Follow us</div>
-            <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
+
+          <div>
+            <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+              Connect With Us
+            </h3>
+            <div className="flex mt-5 space-x-5">
               <a
-                href="https://twitter.com/web3templates"
+                href="https://twitter.com/robogen_edu"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 <span className="sr-only">Twitter</span>
                 <Twitter />
               </a>
               <a
-                href="https://facebook.com/web3templates"
+                href="https://linkedin.com/company/robogen"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
-                <span className="sr-only">Facebook</span>
-                <Facebook />
-              </a>
-              <a
-                href="https://instagram.com/web3templates"
-                target="_blank"
-                rel="noopener"
-              >
-                <span className="sr-only">Instagram</span>
-                <Instagram />
-              </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener">
-                <span className="sr-only">Linkedin</span>
+                <span className="sr-only">LinkedIn</span>
                 <Linkedin />
               </a>
+              <a
+                href="https://youtube.com/robogen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >
+                <span className="sr-only">YouTube</span>
+                <Youtube />
+              </a>
+              <a
+                href="mailto:contact@robogen.in"
+                className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >
+                <span className="sr-only">Email</span>
+                <Mail />
+              </a>
+            </div>
+
+            <div className="mt-6">
+              <h4 className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                Subscribe to our newsletter
+              </h4>
+              <form className="mt-2 flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="px-3 py-2 text-sm border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-700"
+                />
+                <button
+                  type="submit"
+                  className="px-3 py-2 text-sm text-white bg-indigo-600 rounded-r-md hover:bg-indigo-700 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                >
+                  Join
+                </button>
+              </form>
             </div>
           </div>
         </div>
 
-        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a href="https://web3templates.com/" target="_blank" rel="noopener">
-            Web3Templates.
-          </a>{" "}
-          Illustrations from{" "}
-          <a href="https://www.glazestock.com/" target="_blank" rel="noopener ">
-            Glazestock
-          </a>
+        <div className="my-10 text-sm text-center text-gray-500 dark:text-gray-400">
+          Copyright © {new Date().getFullYear()} Robogen. All rights reserved.
+          <div className="mt-2">
+            Made with ♥ for STEM education in India
+          </div>
         </div>
       </Container>
-      {/* Do not remove this */}
-      <Backlink />
     </div>
   );
 }
 
+// Add this new icon component
+const Youtube = ({ size = 24 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+  </svg>
+);
+
+const Mail = ({ size = 24 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+  </svg>
+);
+
+// Keep existing Twitter, Linkedin components...
 const Twitter = ({ size = 24 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
