@@ -54,7 +54,7 @@ export const Hero = () => {
               <span className="text-2xl font-bold">NEP 2020 Ready</span>
             </div>
             <div className="text-gray-500 dark:text-gray-400">
-              <span className="text-2xl font-bold">IIT Students' Mentorship </span>
+              <span className="text-2xl font-bold">IIT Students&apos; Mentorship </span>
             </div>
           </div>
         </div>

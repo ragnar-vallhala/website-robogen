@@ -29,7 +29,7 @@ export default function Workshops() {
               <h3 className="text-xl font-semibold mb-2">
                 Junior Innovators (Class 6-8)
               </h3>
-              <p className="mb-4">"Fun with Technology" - Learn by Doing!</p>
+              <p className="mb-4">&ldquo;Fun with Technology&rdquo; - Learn by Doing!</p>
               <ul className="text-left list-disc pl-5 space-y-1 text-sm">
                 <li>Python storytelling with Google Colab</li>
                 <li>AI image classification projects</li>
@@ -47,7 +47,7 @@ export default function Workshops() {
                 Future Builders (Class 9-12)
               </h3>
               <p className="mb-4">
-                "Build the Future" - Explore AI, Code & Create
+                &ldquo;Build the Future&rdquo; - Explore AI, Code & Create
               </p>
               <ul className="text-left list-disc pl-5 space-y-1 text-sm">
                 <li>Python projects with Replit</li>
