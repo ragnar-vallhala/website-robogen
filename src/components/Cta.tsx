@@ -10,7 +10,7 @@ export const Cta = () => {
             Ready to transform your STEM classroom?
           </h2>
           <p className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">
-            Limited free workshops available for 2024-25 academic year
+            Reach out to us to join the revolution transforming the  educational space.
           </p>
         </div>
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
@@ -18,7 +18,7 @@ export const Cta = () => {
             href="/contact" // Link to your contact form
             className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 hover:bg-indigo-50 transition-colors duration-300"
           >
-            Book a Free Demo
+            Contact US
           </a>
         </div>
       </div>

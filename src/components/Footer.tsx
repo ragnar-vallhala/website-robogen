@@ -6,11 +6,11 @@ import { Container } from "@/components/Container";
 
 export function Footer() {
   const navigation = [
+    { name: "Blog", href: "/blog" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Products", href: "/products" },
     { name: "Workshops", href: "/workshops" },
-    { name: "Curriculum", href: "/curriculum" },
-    { name: "ATL Integration", href: "/atl" },
-    { name: "About Us", href: "/about" },
-    { name: "Blog", href: "/blog" }
+    { name: "About Us", href: "/about us" }
   ];
 
   const legal = [
@@ -30,7 +30,7 @@ export function Footer() {
                 className="flex items-center space-x-2 text-2xl font-medium text-indigo-600 dark:text-white"
               >
                
-                <span>Robogen</span>
+                <span>Robogenic</span>
               </Link>
             </div>
 
