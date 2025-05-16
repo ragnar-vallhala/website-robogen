@@ -51,7 +51,7 @@ const TermsOfService = () => {
             Effective Date: {new Date().toLocaleDateString()}
           </p>
           <p className="mt-4 max-w-2xl mx-auto">
-            By using Robogenic's services, you agree to these terms governing our educational programs and website usage.
+            By using Robogenic&apos;s services, you agree to these terms governing our educational programs and website usage.
           </p>
         </div>
 

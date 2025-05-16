@@ -34,7 +34,7 @@ const AboutUs = () => {
             About Robogenic
           </h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Pioneering hands-on technology education for India's future innovators
+            Pioneering hands-on technology education for India&apos;s future innovators
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const AboutUs = () => {
                 At Robogenic, our mission is to make future-ready technology education accessible, engaging, and empowering for every school in India.
               </p>
               <p className="text-lg">
-                We're not just teaching tech — we're building confidence, innovation mindsets, and problem-solving leaders for tomorrow's world.
+                We&apos;re not just teaching tech — we&apos;re building confidence, innovation mindsets, and problem-solving leaders for tomorrow&apos;s world.
               </p>
             </div>
           </div>
