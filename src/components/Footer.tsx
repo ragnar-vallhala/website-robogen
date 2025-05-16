@@ -6,11 +6,9 @@ import { Container } from "@/components/Container";
 
 export function Footer() {
   const navigation = [
-    { name: "Blog", href: "/blog" },
     { name: "Solutions", href: "/solutions" },
-    { name: "Products", href: "/products" },
     { name: "Workshops", href: "/workshops" },
-    { name: "About Us", href: "/about us" }
+    { name: "About Us", href: "/aboutus" }
   ];
 
   const legal = [

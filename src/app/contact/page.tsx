@@ -16,28 +16,28 @@ export default function Contact() {
               <EnvelopeIcon className="h-12 w-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-1">Email</h3>
               <a
-                href="mailto:info@robogen.com"
+                href="mailto:robogenic25@gmail.com"
                 className="text-blue-700 hover:underline"
               >
-                info@robogen.com
+                robogenic25@gmail.com
               </a>
             </div>
 
             <div className="flex flex-col items-center">
               <PhoneIcon className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold mb-1">Phone</h3>
-              <a href="tel:+1234567890" className="text-green-700 hover:underline">
-                +1 (234) 567-890
+              <a href="tel:+919596917316" className="text-green-700 hover:underline">
+                +91 9596917316
               </a>
             </div>
 
             <div className="flex flex-col items-center">
               <MapPinIcon className="h-12 w-12 text-purple-600 mb-4" />
               <h3 className="text-xl font-semibold mb-1">Address</h3>
-              <address className="not-italic">
-                123 Innovation Drive<br />
-                Tech City, TC 12345<br />
-                Country
+              <address className="not-italic text-center">
+                C29 Patel Nagar 2<sup>nd</sup>,<br />
+                Gaziabad, Uttar Pradesh,<br />
+                201001, India
               </address>
             </div>
           </div>

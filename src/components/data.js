@@ -43,40 +43,39 @@ import { MdOutlineLibraryBooks, MdVerified, MdBuild } from 'react-icons/md';
 
 export { benefitOne, benefitTwo, labBenefits, features, package1, package2, package3, workshop68, workshop912, teacherWorkshop };
 
-
 const teacherWorkshop = {
   title: "Teacher Training Plan: Empowering Educators with Tech & ATL",
   desc: "A hands-on professional development program that equips educators with practical tools in coding, AI, and ATL pedagogy — to make learning more engaging, relevant, and future-ready.",
-  image: teacherWorkshopImg, // Replace with actual image import or URL
+  image: teacherWorkshopImg,
   bullets: [
     {
       title: "Python for Real Subjects",
-      desc: "Teachers will use Google Colab to learn how Python can visualize Science and Math data — like plotting a pendulum graph or solving equations — making abstract topics concrete.",
+      desc: "Use Python to visualize Science/Math data in Google Colab.",
       icon: <ChartBarIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "AI Tools for Smart Classrooms",
-      desc: "They’ll learn to use Teachable Machine for creating image/audio models, and ChatGPT to design learning games or interactive lessons customized to their subject.",
+      desc: "Create image/audio models with Teachable Machine and ChatGPT.",
       icon: <AcademicCapIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "Craft AI Prompts for Class Use",
-      desc: "Teachers will practice writing smart prompts in ChatGPT for creating worksheets, quizzes, summaries, and lesson ideas. Bonus: use Canva to visualize the AI-generated content.",
+      desc: "Write smart prompts for worksheets, quizzes, and lesson ideas.",
       icon: <PencilSquareIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "Simulate Science Models Using IoT",
-      desc: "With Tinkercad Circuits, educators will build virtual sensors for temperature, light, or sound — ideal for demonstrating real-world concepts digitally in Physics or EVS.",
+      desc: "Build virtual sensors for Physics/EVS using Tinkercad.",
       icon: <WrenchIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "Make ATL Connect to Curriculum",
-      desc: "Teachers will map ATL projects to subject chapters — like designing a solar tracker while teaching renewable energy — using Google Docs and Canva to plan worksheets.",
+      desc: "Map ATL projects to subject chapters using Google Docs/Canva.",
       icon: <BookOpenIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "Design Your Own ATL Lesson",
-      desc: "In teams, teachers will create and present a mini ATL-integrated lesson plan using Slides or Docs — combining their subject with coding, AI, or robotics in a hands-on way.",
+      desc: "Create and present an ATL-integrated lesson plan in teams.",
       icon: <LightBulbIcon className="w-6 h-6 text-primary" />,
     },
   ],
@@ -85,81 +84,78 @@ const teacherWorkshop = {
 const workshop912 = {
   title: "Workshop for Classes 9–12: Build the Future — Explore AI, Code, and Create",
   desc: "An immersive tech workshop for high school students to dive into Python, AI, IoT, and app development — learning future-ready skills through real projects and creative challenges.",
-  image: workshop912Img, // Replace with actual image import or URL
+  image: workshop912Img,
   bullets: [
     {
       title: "Python Mini Projects: From Code to Creation",
-      desc: "Students will learn Python basics and build a mini calculator or quiz app using Google Colab and Replit. They’ll use conditionals, loops, and functions for real problem-solving.",
+      desc: "Build calculator/quiz apps using Python in Google Colab/Replit.",
       icon: <WrenchScrewdriverIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "Build & Understand AI Models",
-      desc: "Using Teachable Machine, students will create image or sound classification models (e.g., different claps or hand gestures), then analyze how the model learns, visualizing it in Colab.",
+      desc: "Create image/sound classifiers with Teachable Machine.",
       icon: <CpuChipIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "ChatGPT Bot Creator",
-      desc: "Students will go beyond chatting — they’ll build custom Q&A bots for topics like science or exam prep using ChatGPT prompts and structure them like a chatbot using prompt templates.",
+      desc: "Develop custom Q&A bots using prompt templates.",
       icon: <ChatBubbleLeftRightIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "IoT in Action: Virtual Circuits",
-      desc: "Using Tinkercad, students will simulate a motion-sensor security alarm or light-sensitive device. They'll connect sensors, buzzers, and LEDs — virtually wiring up the Internet of Things.",
+      desc: "Simulate motion/light sensors with Tinkercad Circuits.",
       icon: <GlobeAltIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "Design an App Without Code",
-      desc: "With MIT App Inventor, students will create a basic Android app — like a health tracker, quiz app, or campus assistant. They'll learn UI/UX and logic flow using blocks, not code.",
+      desc: "Create Android apps using MIT App Inventor blocks.",
       icon: <DevicePhoneMobileIcon className="w-6 h-6 text-primary" />,
     },
     {
       title: "Demo Day: Pitch Like a Startup",
-      desc: "Teams will present their projects — whether it’s an app, AI model, or IoT demo — through live presentations or slides, gaining confidence in tech communication and innovation.",
+      desc: "Present projects through live demos or slides.",
       icon: <PresentationChartBarIcon className="w-6 h-6 text-primary" />,
     },
   ],
 };
 
-
-// Workshops
 const workshop68 = {
   title: "Workshop for Classes 6–8: Fun with Technology — Learn by Doing!",
   desc: "A hands-on learning experience designed to introduce students to coding, AI, electronics, and creativity through fun and engaging projects.",
-  image: workshop68Img, // Replace with actual image import or URL if needed
+  image: workshop68Img,
   bullets: [
     {
       title: "Make Your Own Story Game in Python",
-      desc: "Students will learn basic programming concepts like print, input, and if-else through a fun storytelling activity. They'll code their own 'choose your adventure' game in Google Colab.",
+      desc: "Code a 'choose your adventure' game in Google Colab.",
       icon: <CodeBracketIcon />,
     },
     {
       title: "Train an AI to Recognize You!",
-      desc: "Kids will use Teachable Machine to train an AI model to recognize different poses or facial expressions. They’ll be amazed to see how the AI reacts to their own actions — in real time!",
+      desc: "Create pose/expression detectors with Teachable Machine.",
       icon: <CpuChipIcon />,
     },
     {
       title: "Ask Like a Genius – Fun with ChatGPT",
-      desc: "Students will explore how asking better questions gives cooler results. They'll create a poem, a short story, and even design a birthday card using ChatGPT and Canva.",
+      desc: "Generate poems, stories, and cards using AI prompts.",
       icon: <ChatBubbleLeftRightIcon />,
     },
     {
       title: "Light Up a Virtual LED",
-      desc: "Using Tinkercad Circuits, students will create a simple circuit that turns an LED on and off — all virtually! They'll learn how switches and motors work while having fun.",
+      desc: "Build simple circuits in Tinkercad.",
       icon: <LightBulbIcon />,
     },
     {
       title: "Design a Smart School Gadget",
-      desc: "Students will brainstorm and sketch a smart classroom device — like a bag detector or smart desk fan — using Scratch for animation and Canva for presentation posters.",
+      desc: "Brainstorm smart devices using Scratch/Canva.",
       icon: <PuzzlePieceIcon />,
     },
     {
       title: "Final Project: Show and Tell",
-      desc: "Each group will pick a project (chatbot, smart sensor, AI image detector) and present it using a combination of tools they learned — showcasing creativity, logic, and teamwork.",
+      desc: "Present creative projects combining learned tools.",
       icon: <RocketLaunchIcon />,
     },
   ],
 };
-
 
 // Package 1
 const package1 = {
