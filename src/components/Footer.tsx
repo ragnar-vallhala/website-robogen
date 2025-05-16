@@ -3,18 +3,17 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
 
-
 export function Footer() {
   const navigation = [
     { name: "Solutions", href: "/solutions" },
     { name: "Workshops", href: "/workshops" },
-    { name: "About Us", href: "/aboutus" }
+    { name: "About Us", href: "/aboutus" },
   ];
 
   const legal = [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
-    { name: "Contact", href: "/contact" }
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -27,14 +26,14 @@ export function Footer() {
                 href="/"
                 className="flex items-center space-x-2 text-2xl font-medium text-indigo-600 dark:text-white"
               >
-               
                 <span>Robogenic</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-600 dark:text-gray-300">
-              Empowering classrooms with AI and robotics education through hands-on 
-              workshops and ATL-compliant curriculum for students and teachers.
+              Empowering classrooms with AI and robotics education through
+              hands-on workshops and ATL-compliant curriculum for students and
+              teachers.
             </div>
           </div>
 
@@ -78,13 +77,13 @@ export function Footer() {
             </h3>
             <div className="flex mt-5 space-x-5">
               <a
-                href="https://twitter.com/robogen_edu"
+                href="https://x.com/Robogenic25"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 <span className="sr-only">Twitter</span>
-                <Twitter />
+                <X />
               </a>
               <a
                 href="https://linkedin.com/company/robogen"
@@ -96,7 +95,16 @@ export function Footer() {
                 <Linkedin />
               </a>
               <a
-                href="https://youtube.com/robogen"
+                href="https://www.instagram.com/robo.genic/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >
+                <span className="sr-only">LinkedIn</span>
+                <Instagram />
+              </a>
+              <a
+                href="https://www.youtube.com/@Robogenic25"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
@@ -105,7 +113,16 @@ export function Footer() {
                 <Youtube />
               </a>
               <a
-                href="mailto:contact@robogen.in"
+                href="https://www.facebook.com/people/Robogenic/61575906225125/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >
+                <span className="sr-only">YouTube</span>
+                <Facebook />
+              </a>
+              <a
+                href="mailto:robogenic25@gmail.com"
                 className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 <span className="sr-only">Email</span>
@@ -136,9 +153,7 @@ export function Footer() {
 
         <div className="my-10 text-sm text-center text-gray-500 dark:text-gray-400">
           Copyright © {new Date().getFullYear()} Robogen. All rights reserved.
-          <div className="mt-2">
-            Made with ♥ for STEM education in India
-          </div>
+          <div className="mt-2">Made with ♥ for STEM education in India</div>
         </div>
       </Container>
     </div>
@@ -170,16 +185,15 @@ const Mail = ({ size = 24 }) => (
   </svg>
 );
 
-// Keep existing Twitter, Linkedin components...
-const Twitter = ({ size = 24 }) => (
+const X = ({ size = 24 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
-    viewBox="0 0 24 24"
+    viewBox="0 0 350 350"
     fill="currentColor"
   >
-    <path d="M24 4.37a9.6 9.6 0 0 1-2.83.8 5.04 5.04 0 0 0 2.17-2.8c-.95.58-2 1-3.13 1.22A4.86 4.86 0 0 0 16.61 2a4.99 4.99 0 0 0-4.79 6.2A13.87 13.87 0 0 1 1.67 2.92 5.12 5.12 0 0 0 3.2 9.67a4.82 4.82 0 0 1-2.23-.64v.07c0 2.44 1.7 4.48 3.95 4.95a4.84 4.84 0 0 1-2.22.08c.63 2.01 2.45 3.47 4.6 3.51A9.72 9.72 0 0 1 0 19.74 13.68 13.68 0 0 0 7.55 22c9.06 0 14-7.7 14-14.37v-.65c.96-.71 1.79-1.6 2.45-2.61z" />
+    <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66" />
   </svg>
 );
 
@@ -194,6 +208,7 @@ const Facebook = ({ size = 24 }) => (
     <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07" />
   </svg>
 );
+
 const Instagram = ({ size = 24 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
