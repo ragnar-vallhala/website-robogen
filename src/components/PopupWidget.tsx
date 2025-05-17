@@ -19,39 +19,74 @@ export function PopupWidget() {
     mode: "onTouched",
   });
 
+  console.log("Form errors", errors);
+
   const [isSuccess, setIsSuccess] = useState(false);
   const [Message, setMessage] = useState("");
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
-  const onSubmit = async (data: any, e: any) => {
-    console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data, null, 2),
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          e.target.reset();
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
-        }
+  // const onSubmit = async (data: any, e: any) => {
+  //   console.log(data);
+  //   await fetch("https://api.web3forms.com/submit", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: JSON.stringify(data, null, 2),
+  //   })
+  //     .then(async (response) => {
+  //       let json = await response.json();
+  //       if (json.success) {
+  //         setIsSuccess(true);
+  //         setMessage(json.message);
+  //         e.target.reset();
+  //         reset();
+  //       } else {
+  //         setIsSuccess(false);
+  //         setMessage(json.message);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       setIsSuccess(false);
+  //       setMessage("Client Error. Please check the console.log for more info");
+  //       console.log(error);
+  //     });
+  // };
+
+  const onSubmit = async (data: any) => {
+    try {
+      console.log('Sending data:', data);
+      const response = await fetch('http://localhost:3000/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message
+        }),
       })
-      .catch((error) => {
-        setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
-      });
-  };
+      console.log('Got response:', response);
+
+      const result = await response.json()
+      
+      if (response.ok) {
+        setIsSuccess(true)
+        setMessage(result.message)
+        reset()
+      } else {
+        setIsSuccess(false)
+        setMessage(result.error || 'Failed to send message')
+      }
+    } catch (error) {
+      setIsSuccess(false)
+      setMessage('Network error. Please try again.')
+      console.error('Submission error:', error)
+    }
+  }
 
   return (
     <div>

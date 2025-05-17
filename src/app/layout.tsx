@@ -6,8 +6,10 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PopupWidget } from "@/components/PopupWidget";
+import AuthProvider from "@/components/AuthProvider";
 
-const inter = Poppins({ subsets: ["latin"], weight:"400" });
+const inter = Poppins({ subsets: ["latin"], weight: "400" });
+
 
 export const metadata: Metadata = {
   title: "Robogen | AI & Robotics Workshops for Schools",
@@ -25,20 +27,42 @@ export const metadata: Metadata = {
   },
 };
 
+// export default function RootLayout({
+//   children,
+// }: Readonly<{
+//   children: React.ReactNode;
+// }>) {
+//   return (
+//     <html lang="en" suppressHydrationWarning>
+//       <body className={inter.className}>
+//         <ThemeProvider attribute="class">
+//           <Navbar />
+//           <div>{children}</div>
+//          <Footer />
+//           <PopupWidget />
+//         </ThemeProvider>
+//       </body>
+//     </html>
+//   );
+// }
+
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class">
-          <Navbar />
-          <div>{children}</div>
-          <Footer />
-          <PopupWidget />
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider attribute="class">
+            <Navbar />
+            {children}
+            <Footer />
+            <PopupWidget />
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );

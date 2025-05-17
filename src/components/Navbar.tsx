@@ -3,8 +3,10 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export const Navbar = () => {
+  const { data: session, status } = useSession();
   const navigation = [
     "Product",
     "Features",
@@ -26,13 +28,34 @@ export const Navbar = () => {
         </Link>
 
         {/* get started  */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+        {/* <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
             <ThemeChanger />
             <div className="hidden mr-3 lg:flex nav__item">
               <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
                 Get Started
               </Link>
             </div>
+        </div> */}
+
+           {/* Right Side - Theme + Auth Button */}
+           <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2 items-center">
+          <ThemeChanger />
+          {/* Auth Buttons */}
+          {status === "loading" ? null : session ? (
+            <button
+              onClick={() => signOut()}
+              className="px-6 py-2 text-white bg-red-600 rounded-md"
+            >
+              Sign Out
+            </button>
+          ) : (
+            <button
+              onClick={() => signIn()}
+              className="px-6 py-2 text-white bg-indigo-600 rounded-md"
+            >
+              Sign In
+            </button>
+          )}
         </div>
                 
         <Disclosure>
