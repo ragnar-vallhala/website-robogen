@@ -26,7 +26,7 @@ export function Footer() {
                 href="/"
                 className="flex items-center space-x-2 text-2xl font-medium text-indigo-600 dark:text-white"
               >
-                <span>Robogenic</span>
+                <span>Navrobotec</span>
               </Link>
             </div>
 
