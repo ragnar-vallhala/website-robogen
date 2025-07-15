@@ -26,6 +26,13 @@ export function Footer() {
                 href="/"
                 className="flex items-center space-x-2 text-2xl font-medium text-indigo-600 dark:text-white"
               >
+                <Image
+                  src="../navrobotec.svg" // Replace with your actual logo path
+                  alt="Logo"
+                  width={48}
+                  height={48}
+                  className="rounded"
+                />
                 <span>Navrobotec</span>
               </Link>
             </div>

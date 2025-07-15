@@ -20,37 +20,42 @@ export function PopupWidget() {
   });
 
   const [isSuccess, setIsSuccess] = useState(false);
-  const [Message, setMessage] = useState("");
+  const [message, setMessage] = useState("");
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
   const onSubmit = async (data: any, e: any) => {
     console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data, null, 2),
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          e.target.reset();
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwGJ81GV-q1Pd4jVcNilMmE7TZQSUWTHkd2Yx4hFcKYQ-Jzxb4IwdX3Aq-Ofz4xalC3Jg/exec",
+        {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=UTF-8" },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            message: data.message
+          }),
+          redirect: "follow",
         }
-      })
-      .catch((error) => {
+      );
+      
+      console.log("Contact result", response);
+
+      if (response.status === 200) {
+        setIsSuccess(true);
+        setMessage("Your message has been sent successfully!");
+        reset();
+      } else {
         setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
-      });
+        setMessage("Submission failed. Please try again later.");
+      }
+    } catch (error) {
+      console.error(error);
+      setIsSuccess(false);
+      setMessage("Could not submit the form. Please check your network.");
+    }
   };
 
   return (
@@ -127,28 +132,6 @@ export function PopupWidget() {
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
                   {!isSubmitSuccessful && (
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                      <input
-                        type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
-                        {...register("apikey")}
-                      />
-                      <input
-                        type="hidden"
-                        value={`${userName} sent a message from Nextly`}
-                        {...register("subject")}
-                      />
-                      <input
-                        type="hidden"
-                        value="Nextly Template"
-                        {...register("from_name")}
-                      />
-                      <input
-                        type="checkbox"
-                        className="hidden"
-                        style={{ display: "none" }}
-                        {...register("botcheck")}
-                      ></input>
-
                       <div className="mb-4">
                         <label
                           htmlFor="full_name"
@@ -240,6 +223,7 @@ export function PopupWidget() {
                       <div className="mb-3">
                         <button
                           type="submit"
+                          disabled={isSubmitting}
                           className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
                         >
                           {isSubmitting ? (
@@ -268,22 +252,6 @@ export function PopupWidget() {
                           )}
                         </button>
                       </div>
-                      <p
-                        className="text-xs text-center text-gray-400"
-                        id="result"
-                      >
-                        <span>
-                          Powered by{" "}
-                          <a
-                            href="https://Web3Forms.com"
-                            className="text-gray-600"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Web3Forms
-                          </a>
-                        </span>
-                      </p>
                     </form>
                   )}
 
@@ -306,7 +274,7 @@ export function PopupWidget() {
                       <h3 className="py-5 text-xl text-green-500">
                         Message sent successfully
                       </h3>
-                      <p className="text-gray-700 md:px-3">{Message}</p>
+                      <p className="text-gray-700 md:px-3">{message}</p>
                       <button
                         className="mt-6 text-indigo-600 focus:outline-none"
                         onClick={() => reset()}
@@ -336,7 +304,7 @@ export function PopupWidget() {
                       <h3 className="text-xl text-red-400 py-7">
                         Oops, Something went wrong!
                       </h3>
-                      <p className="text-gray-700 md:px-3">{Message}</p>
+                      <p className="text-gray-700 md:px-3">{message}</p>
                       <button
                         className="mt-6 text-indigo-600 focus:outline-none"
                         onClick={() => reset()}

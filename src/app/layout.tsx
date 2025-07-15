@@ -7,21 +7,21 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PopupWidget } from "@/components/PopupWidget";
 
-const inter = Poppins({ subsets: ["latin"], weight:"400" });
+const inter = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Robogen | AI & Robotics Workshops for Schools",
-  description: 
+  title: "Navrobotec | AI,IoT & Robotics Solutions",
+  description:
     "ATL-compliant kits and hands-on workshops for Class 6–12 students & teachers. Learn Python, AI, and robotics with Tinkercad, ChatGPT, and more. Aligned with NEP 2020.",
   keywords: [
-    "robotics workshop", 
-    "ATL lab setup", 
-    "school STEM kits", 
+    "robotics workshop",
+    "ATL lab setup",
+    "school STEM kits",
     "AI for students",
-    "teacher training India"
+    "teacher training India",
   ],
   openGraph: {
-    images: "/img/outer/kits.png", 
+    images: "/img/outer/kits.png",
   },
 };
 

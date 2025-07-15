@@ -31,7 +31,7 @@ const AboutUs = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">
-            About Robogenic
+            About Navrobotec
           </h1>
           <p className="text-xl max-w-3xl mx-auto">
             Pioneering hands-on technology education for India&apos;s future innovators
@@ -49,7 +49,7 @@ const AboutUs = () => {
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
               <p className="text-lg mb-4">
-                At Robogenic, our mission is to make future-ready technology education accessible, engaging, and empowering for every school in India.
+                At Navrobotec, our mission is to make future-ready technology education accessible, engaging, and empowering for every school in India.
               </p>
               <p className="text-lg">
                 We&apos;re not just teaching tech — we&apos;re building confidence, innovation mindsets, and problem-solving leaders for tomorrow&apos;s world.

@@ -1,7 +1,7 @@
 {
   "name": "robogen-website",
   "version": "0.0.0",
-  "description": "Robogen official website",
+  "description": "Navrobotec official website",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -18,7 +18,7 @@
     "tailwindcss",
     "free"
   ],
-  "author": "Surjith S M",
+  "author": "Ashutosh Vishwakarma",
   "license": "ISC",
   "dependencies": {
     "@headlessui/react": "^2.0.3",

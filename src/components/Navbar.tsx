@@ -5,12 +5,7 @@ import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
-  const navigation = [
-    "Solutions",
-    "Workshops",
-    "Contact",
-    "About Us",
-  ];
+  const navigation = ["Solutions", "Workshops", "Contact", "About Us"];
 
   return (
     <div className="w-full">
@@ -18,6 +13,13 @@ export const Navbar = () => {
         {/* Logo  */}
         <Link href="/">
           <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+            <Image
+              src="/navrobotec.svg" // Replace with your actual logo path
+              alt="Logo"
+              width={48}
+              height={48}
+              className="rounded"
+            />
             <span className="font-large">NAVROBOTEC</span>
           </span>
         </Link>
