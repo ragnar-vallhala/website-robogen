@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     "AI for students",
     "teacher training India",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/navrobotec.svg",
+  },
   openGraph: {
     images: "/img/outer/kits.png",
   },
