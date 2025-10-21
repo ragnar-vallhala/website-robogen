@@ -1,27 +1,37 @@
 import React from 'react';
-import { SparklesIcon, LightBulbIcon, UserGroupIcon, AcademicCapIcon, PuzzlePieceIcon } from '@heroicons/react/24/outline';
+import { 
+  SparklesIcon, 
+  LightBulbIcon, 
+  UserGroupIcon, 
+  AcademicCapIcon, 
+  PuzzlePieceIcon,
+  CogIcon,
+  CloudIcon,
+  CpuChipIcon,
+  BuildingStorefrontIcon
+} from '@heroicons/react/24/outline';
 
 const AboutUs = () => {
   const missionPoints = [
     {
-      title: "Accessible Tech Education",
-      description: "Democratizing future-ready learning for all schools regardless of size or location",
-      icon: <SparklesIcon className="h-8 w-8 text-blue-600" />
+      title: "Industrial Automation",
+      description: "Transforming manufacturing and logistics with cutting-edge robotics and automation solutions",
+      icon: <CogIcon className="h-8 w-8 text-blue-600" />
     },
     {
-      title: "Hands-On Innovation",
-      description: "Bridging theory and practice with real AI, Robotics, and IoT experiences",
-      icon: <LightBulbIcon className="h-8 w-8 text-green-600" />
+      title: "Smart IoT Integration",
+      description: "Building connected ecosystems with real-time monitoring and control systems",
+      icon: <CloudIcon className="h-8 w-8 text-green-600" />
     },
     {
-      title: "Empowering Educators",
-      description: "Continuous teacher training to sustain tech integration in classrooms",
-      icon: <AcademicCapIcon className="h-8 w-8 text-purple-600" />
+      title: "AI-Powered Solutions",
+      description: "Leveraging machine learning and computer vision for intelligent decision-making",
+      icon: <CpuChipIcon className="h-8 w-8 text-purple-600" />
     },
     {
-      title: "Future Skills Development",
-      description: "Building creativity, problem-solving and confidence in young innovators",
-      icon: <PuzzlePieceIcon className="h-8 w-8 text-orange-600" />
+      title: "Enterprise Digital Transformation",
+      description: "Driving business growth through comprehensive technology modernization",
+      icon: <BuildingStorefrontIcon className="h-8 w-8 text-orange-600" />
     }
   ];
 
@@ -34,7 +44,7 @@ const AboutUs = () => {
             About Navrobotec
           </h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Pioneering hands-on technology education for India&apos;s future innovators
+            Pioneering industrial automation and digital transformation with cutting-edge robotics, IoT, and AI solutions
           </p>
         </div>
 
@@ -49,10 +59,10 @@ const AboutUs = () => {
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
               <p className="text-lg mb-4">
-                At Navrobotec, our mission is to make future-ready technology education accessible, engaging, and empowering for every school in India.
+                At Navrobotec, our mission is to empower industries with innovative deep tech solutions that drive efficiency, automation, and sustainable growth.
               </p>
               <p className="text-lg">
-                We&apos;re not just teaching tech — we&apos;re building confidence, innovation mindsets, and problem-solving leaders for tomorrow&apos;s world.
+                We specialize in creating custom robotics, IoT, and AI systems that transform operations, reduce costs, and future-proof businesses in the Industry 4.0 era.
               </p>
             </div>
           </div>
@@ -82,22 +92,22 @@ const AboutUs = () => {
               <div className="p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-sm">
                 <span className="text-blue-600 font-bold text-xl">1</span>
               </div>
-              <h3 className="font-semibold mb-2">Interactive Workshops</h3>
-              <p className="">Age-appropriate, curriculum-aligned sessions that make tech fun and relatable</p>
+              <h3 className="font-semibold mb-2">Consultation & Analysis</h3>
+              <p className="">Deep dive into your operational challenges and technical requirements</p>
             </div>
             <div className="text-center">
               <div className="p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-sm">
                 <span className="text-blue-600 font-bold text-xl">2</span>
               </div>
-              <h3 className="font-semibold mb-2">Smart Lab Solutions</h3>
-              <p className="">Turnkey setups with drones, robotics kits, and maker tools for hands-on learning</p>
+              <h3 className="font-semibold mb-2">Custom Solution Design</h3>
+              <p className="">Tailored robotics, IoT, and AI solutions that address specific business needs</p>
             </div>
             <div className="text-center">
               <div className="p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-sm">
                 <span className="text-blue-600 font-bold text-xl">3</span>
               </div>
-              <h3 className="font-semibold mb-2">Teacher Enablement</h3>
-              <p className="">Ongoing training to help educators confidently deliver tech education</p>
+              <h3 className="font-semibold mb-2">Implementation & Support</h3>
+              <p className="">End-to-end deployment with ongoing maintenance and optimization services</p>
             </div>
           </div>
         </div>

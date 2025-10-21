@@ -40,28 +40,53 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "Who is this program designed for?",
+    question: "What industries do you serve with your deep tech solutions?",
     answer:
-      "Our programs are tailored for school students from grades 6–12, with customizable content to suit different learning levels and school needs.",
+      "We serve a wide range of industries including manufacturing, healthcare, logistics, agriculture, energy, retail, and more. Our solutions are customizable to address specific challenges across different sectors.",
   },
   {
-    question: "Do schools need prior experience in robotics to set up a lab?",
+    question: "Do you provide end-to-end solutions or individual components?",
     answer:
-      "Not at all! We provide complete support—from lab setup and equipment to teacher training—making it easy for any school to get started.",
+      "We offer both! You can engage us for complete end-to-end solutions covering design, development, and deployment, or you can choose specific components like robotics automation, IoT integration, or AI development based on your needs.",
   },
   {
-    question: "Can we purchase only kits or curriculum separately?",
+    question: "How long does it typically take to implement your solutions?",
     answer:
-      "Yes, schools can opt for standalone kits, curriculum modules, or bundled packages based on their requirements.",
+      "Implementation timelines vary based on project complexity. Pilot projects can take 4-8 weeks, while comprehensive enterprise solutions may require 3-6 months. We follow an agile methodology to deliver value incrementally.",
   },
   {
-    question: "Do you offer training for teachers?",
+    question: "Do you offer ongoing support and maintenance?",
     answer:
-      "Yes, we provide in-depth training for educators to help them confidently run STEM and robotics sessions in the classroom.",
+      "Yes, we provide comprehensive 24/7 support and maintenance packages. This includes regular updates, performance monitoring, technical assistance, and optimization services to ensure your systems run smoothly.",
   },
   {
-    question: "Is technical support available after setup?",
+    question: "Can your solutions integrate with our existing systems?",
     answer:
-      "Absolutely! Our team offers ongoing technical support, regular updates, and assistance to ensure smooth classroom operations.",
+      "Absolutely! We design our solutions with integration in mind. Our team ensures seamless integration with your existing ERP, CRM, and other enterprise systems through well-documented APIs and custom connectors.",
+  },
+  {
+    question: "What is your approach to data security and privacy?",
+    answer:
+      "We implement industry-standard security protocols including encryption, secure APIs, access controls, and compliance with relevant data protection regulations. Security is built into every layer of our solutions.",
+  },
+  {
+    question: "Do you provide training for our team?",
+    answer:
+      "Yes, we offer comprehensive training programs for your technical and operational teams. This includes system operation, maintenance procedures, and best practices to ensure your team can effectively use and manage the solutions.",
+  },
+  {
+    question: "What makes your robotics solutions different from others?",
+    answer:
+      "Our robotics solutions are characterized by customizability, scalability, and advanced AI integration. We focus on creating solutions that not only automate tasks but also learn and adapt to your specific operational environment.",
+  },
+  {
+    question: "Can we start with a pilot project before full implementation?",
+    answer:
+      "Yes, we encourage starting with pilot projects to demonstrate value and validate the solution in your specific context. This approach minimizes risk and ensures the solution meets your expectations before scaling.",
+  },
+  {
+    question: "What is your pricing model?",
+    answer:
+      "We offer flexible pricing models including project-based pricing, subscription models for ongoing services, and customized enterprise agreements. We'll work with you to find the most suitable option for your budget and requirements.",
   },
 ];

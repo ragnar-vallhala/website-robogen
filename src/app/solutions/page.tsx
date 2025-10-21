@@ -1,26 +1,25 @@
 import { Container } from "@/components/Container";
-import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Benefits } from "@/components/Benefits";
 import { Cta } from "@/components/Cta";
 
-import { package1,package2, package3 } from "@/components/data";
+import { industryPackage1, industryPackage2, industryPackage3 } from "@/components/data";
+
 export default function Solutions() {
   return (
     <Container>
       <SectionTitle
-        preTitle="Our solutions"
-        title="Solutions for the cutting edge new schools"
+        preTitle="Our Solutions"
+        title="Industrial-Grade Deep Tech Solutions"
       >
-        Our hands-on programs boost engagement by 85% and align with NEP 2020
-        goals. Designed by IIT educators, we make advanced tech accessible to
-        all classrooms.
+        Our cutting-edge robotics, IoT, and AI solutions drive operational efficiency by 40%+ 
+        and align with Industry 4.0 standards. Designed by industry experts, we make advanced 
+        technology accessible and scalable for businesses of all sizes.
       </SectionTitle>
 
-      <Benefits data={package1} imgDim={512}/>
-      <Benefits imgPos="right" data={package2} imgDim={512}/>
-      <Benefits data={package3} imgDim={512}/>
-      <Cta />
+      <Benefits data={industryPackage1} imgDim={512}/>
+      <Benefits imgPos="right" data={industryPackage2} imgDim={512}/>
+      <Benefits data={industryPackage3} imgDim={512}/>
     </Container>
   );
 }
