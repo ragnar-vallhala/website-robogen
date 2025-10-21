@@ -180,7 +180,6 @@ export default function IndustrySolutions() {
         <SectionTitle 
           preTitle="Our Process" 
           title="From Concept to Deployment"
-          className="text-center"
         >
           We follow a structured approach to ensure successful implementation of your deep tech solutions.
         </SectionTitle>
@@ -229,7 +228,7 @@ export default function IndustrySolutions() {
           Ready to Transform Your Business with Deep Tech?
         </h3>
         <p className="text-xl mb-8 opacity-90">
-          Let's discuss how our robotics, IoT, and AI solutions can drive your digital transformation.
+          Let&apos;s discuss how our robotics, IoT, and AI solutions can drive your digital transformation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
